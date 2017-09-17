@@ -1,65 +1,54 @@
 {
-	"scripts": {
-		"eslint": "eslint --format=node_modules/eslint-formatter-pretty .",
-		"lint": "npm run -s format && npm run -s eslint",
-		"commitmsg": "commitlint -e",
-		"precommit": "lint-staged",
-		"pretest": "npm run lint",
-		"format": "prettier --write '**/*.js'",
-		"test": "jest",
-		"test:watch": "jest --watch",
-		"test:coverage": "jest --coverage"
-	},
-	"eslintConfig": {
-		"extends": [
-			"standard",
-			"prettier"
-		]
-	},
-	"eslintIgnore": [
-		"node_modules",
-		"coverage",
-		"dist",
-		"public"
-	],
-	"prettier": {
-		"semi": false,
-		"singleQuote": true
-	},
-	"babel": {
-		"presets": [
-			[
-				"env",
-				{
-					"targets": {
-						"node": "current"
-					}
-				}
-			]
-		]
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^3.2.0",
-		"@commitlint/config-angular": "^3.1.1",
-		"babel-jest": "^21.0.2",
-		"babel-preset-env": "^1.6.0",
-		"eslint": "^4.7.0",
-		"eslint-config-prettier": "^2.5.0",
-		"eslint-config-standard": "^10.2.1",
-		"eslint-formatter-pretty": "^1.3.0",
-		"eslint-plugin-import": "^2.7.0",
-		"eslint-plugin-node": "^5.1.1",
-		"eslint-plugin-promise": "^3.5.0",
-		"eslint-plugin-standard": "^3.0.1",
-		"husky": "^0.14.3",
-		"jest": "^21.1.0",
-		"lint-staged": "^4.2.1",
-		"prettier": "^1.7.0"
-	},
-	"lint-staged": {
-		"**/*.js": [
-			"npm run format",
-			"git add"
-		]
-	}
+  "scripts": {
+    "eslint": "eslint --format=node_modules/eslint-formatter-pretty .",
+    "lint": "npm run -s format && npm run -s eslint",
+    "commitmsg": "commitlint -e",
+    "precommit": "lint-staged",
+    "pretest": "npm run lint",
+    "format": "prettier --write '**/*.js' '**/*.json'",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "eslintConfig": {
+    "extends": ["standard", "prettier"]
+  },
+  "eslintIgnore": ["node_modules", "coverage", "dist", "public"],
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^3.2.0",
+    "@commitlint/config-angular": "^3.1.1",
+    "babel-jest": "^21.0.2",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.7.0",
+    "eslint-config-prettier": "^2.5.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-formatter-pretty": "^1.3.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "jest": "^21.1.0",
+    "lint-staged": "^4.2.1",
+    "prettier": "^1.7.0"
+  },
+  "lint-staged": {
+    "**/*.js": ["npm run format", "git add"]
+  }
 }
