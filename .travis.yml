@@ -13,11 +13,8 @@ node_js:
   - 6
   - 4
 
-before_script:
-  - npm prune
-
 after_success:
-  - npm run semantic-release
+  - yarn run semantic-release
 
 branches:
   except:
