@@ -9,7 +9,7 @@ Input:
 <Component name="FooBar">
   <div class="g-foobar">
     <h1>This is a foobar called {{ props.title }}</h1>
-    {{ props.children }}
+    {{{ props.children }}}
     <h2>otherProp is {{ props.otherProp }}</h2>
   </div>
 </Component>
