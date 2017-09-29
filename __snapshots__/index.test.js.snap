@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`uses component from other file 1`] = `
+"<import src=\\"./foobar.html\\" as=\\"FooBar\\"></import>
+<div class=\\"g-foobar\\">
+  <h1>This is a foobar called this is the title</h1>
+  
+  <p>Child Here</p>
+
+  <h2>otherProp is 5</h2>
+</div>
+
+"
+`;
