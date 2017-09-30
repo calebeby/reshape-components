@@ -6,7 +6,8 @@
     "format": "prettier --write '**/*.js' '**/*.json'",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "eslintConfig": {
     "extends": [
@@ -64,7 +65,8 @@
     "prettier": "^1.7.2",
     "prettier_d": "^5.7.3",
     "reshape": "^0.4.1",
-    "reshape-expressions": "^0.1.5"
+    "reshape-expressions": "^0.1.5",
+    "semantic-release": "^8.0.3"
   },
   "lint-staged": {
     "**/*.js": [
@@ -76,5 +78,7 @@
     "mz": "^2.7.0",
     "p-reduce": "^1.0.0",
     "reshape-plugin-util": "^0.2.1"
-  }
+  },
+  "version": "0.0.0-development",
+  "repository": "calebeby/reshape-components"
 }
