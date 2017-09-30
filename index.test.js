@@ -12,11 +12,15 @@ const fixture = async name => {
     plugins: [components({ root }), expressions()]
   })
     .process(input)
-    .then(result => result.output())
+    .then(result => result.output({ foo: 'caleb' }))
 }
 
 test('uses component from other file', async () => {
   expect(await fixture('component')).toMatchSnapshot()
+})
+
+test('passes locals into component file', async () => {
+  expect(await fixture('locals')).toMatchSnapshot()
 })
 
 describe('import element', () => {

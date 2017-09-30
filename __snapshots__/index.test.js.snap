@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`passes locals into component file 1`] = `
+"
+<div class=\\"g-foobar\\">
+  <h1>Title was passed as title here</h1>
+  
+  <p>Child Here</p>
+
+  <h2>local foo was passed as caleb</h2>
+</div>
+
+"
+`;
+
 exports[`uses component from other file 1`] = `
 "
 <div class=\\"g-foobar\\">
