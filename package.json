@@ -4,10 +4,9 @@
     "lint": "npm run -s format && npm run -s eslint",
     "pretest": "npm run lint",
     "format": "prettier --write '**/*.js' '**/*.json'",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +46,7 @@
   "devDependencies": {
     "@commitlint/cli": "^3.2.0",
     "@commitlint/config-angular": "^3.1.1",
-    "babel-jest": "^21.0.2",
+    "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.0",
     "eslint": "^4.7.2",
     "eslint-config-prettier": "^2.6.0",
@@ -60,7 +59,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "eslint_d": "^5.1.0",
     "husky": "^0.14.3",
-    "jest": "^21.1.0",
+    "jest": "^21.2.1",
     "lint-staged": "^4.2.3",
     "prettier": "^1.7.2",
     "prettier_d": "^5.7.3",

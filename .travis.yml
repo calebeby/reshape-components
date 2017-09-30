@@ -1,8 +1,10 @@
 language: node_js
 
-cache:
-  directories:
-    - node_modules
+cache: yarn
+
+install:
+  - yarn
+  - yarn global add codecov
 
 notifications:
   email: false
@@ -14,6 +16,7 @@ node_js:
 
 after_success:
   - yarn run semantic-release
+  - codecov
 
 branches:
   except:
