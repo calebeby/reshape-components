@@ -16,7 +16,7 @@ const expectAttribute = (node, attribute, { PluginError }) => {
 
 const compileComponent = (src, ctx, props) =>
   readFile(src, 'utf8')
-    .then(ctx.parser)
+    .then(text => ctx.parser(text, ctx.filename))
     .then(componentTree =>
       pReduce(
         ctx.plugins,
