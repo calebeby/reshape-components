@@ -21,7 +21,7 @@ test('uses component from other file', async () => {
 
 describe('import element', () => {
   test('should throw if "src" attribute is missing', () => {
-    expect(fixture('no-src')).rejects.toHaveProperty(
+    return expect(fixture('no-src')).rejects.toHaveProperty(
       'message',
       `import tag has no "src" attribute
 From Plugin: reshape-components
@@ -33,7 +33,7 @@ Location: [no filename]:1:1
     )
   })
   test('should throw if "as" attribute is missing', () => {
-    expect(fixture('no-as')).rejects.toHaveProperty(
+    return expect(fixture('no-as')).rejects.toHaveProperty(
       'message',
       `import tag has no "as" attribute
 From Plugin: reshape-components
