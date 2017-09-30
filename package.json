@@ -4,29 +4,19 @@
     "lint": "npm run -s format && npm run -s eslint",
     "pretest": "npm run lint",
     "format": "prettier --write '**/*.js' '**/*.json'",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
   "eslintConfig": {
-    "extends": [
-      "standard",
-      "prettier",
-      "plugin:jest/recommended"
-    ],
-    "plugins": [
-      "jest"
-    ],
+    "extends": ["standard", "prettier", "plugin:jest/recommended"],
+    "plugins": ["jest"],
     "env": {
       "jest/globals": true
     }
   },
-  "eslintIgnore": [
-    "node_modules",
-    "coverage",
-    "dist",
-    "public"
-  ],
+  "eslintIgnore": ["node_modules", "coverage", "dist", "public"],
   "prettier": {
     "semi": false,
     "singleQuote": true
@@ -68,10 +58,7 @@
     "semantic-release": "^8.0.3"
   },
   "lint-staged": {
-    "**/*.js": [
-      "npm run format",
-      "git add"
-    ]
+    "**/*.js": ["npm run format", "git add"]
   },
   "dependencies": {
     "mz": "^2.7.0",
