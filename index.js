@@ -2,8 +2,17 @@ const path = require('path')
 const { readFile } = require('mz/fs')
 const { modifyNodes } = require('reshape-plugin-util')
 
-const plugin = 'reshape-components'
 const pReduce = require('p-reduce')
+
+const expectAttribute = (node, attribute, { PluginError }) => {
+  if (!(node && node.attrs && node.attrs[attribute])) {
+    throw new PluginError({
+      plugin: 'reshape-components',
+      message: `${node.name} tag is missing a "${attribute}" attribute`,
+      location: node.location
+    })
+  }
+}
 
 const compileComponent = (src, ctx, props) =>
   readFile(src, 'utf8')
@@ -31,21 +40,8 @@ const getImportedComponents = (ast, ctx, opts) => {
     ast,
     n => n.name === 'import',
     node => {
-      // if there is no src, throw an error
-      if (!(node.attrs && node.attrs.src)) {
-        throw new ctx.PluginError({
-          message: 'import tag has no "src" attribute',
-          plugin,
-          location: node.location
-        })
-      }
-      if (!(node.attrs && node.attrs.as)) {
-        throw new ctx.PluginError({
-          message: 'import tag has no "as" attribute',
-          plugin,
-          location: node.location
-        })
-      }
+      expectAttribute(node, 'src', ctx)
+      expectAttribute(node, 'as', ctx)
       const resolveRoot =
         opts.root || (ctx.filename && path.dirname(ctx.filename)) || ''
       const src = path.join(resolveRoot, node.attrs.src[0].content)

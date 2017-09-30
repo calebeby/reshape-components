@@ -23,7 +23,7 @@ describe('import element', () => {
   test('should throw if "src" attribute is missing', () => {
     return expect(fixture('no-src')).rejects.toHaveProperty(
       'message',
-      `import tag has no "src" attribute
+      `import tag is missing a "src" attribute
 From Plugin: reshape-components
 Location: [no filename]:1:1
 
@@ -35,7 +35,7 @@ Location: [no filename]:1:1
   test('should throw if "as" attribute is missing', () => {
     return expect(fixture('no-as')).rejects.toHaveProperty(
       'message',
-      `import tag has no "as" attribute
+      `import tag is missing a "as" attribute
 From Plugin: reshape-components
 Location: [no filename]:1:1
 
