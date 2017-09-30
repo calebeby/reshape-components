@@ -8,18 +8,16 @@ Input:
 
 > foobar.html
 ```html
-<Component name="FooBar">
-  <div class="g-foobar">
-    <h1>This is a foobar called {{ props.title }}</h1>
-    {{{ props.children }}}
-    <h2>otherProp is {{ props.otherProp }}</h2>
-  </div>
-</Component>
+<div class="g-foobar">
+  <h1>This is a foobar called {{ props.title }}</h1>
+  {{{ props.children }}}
+  <h2>otherProp is {{ props.otherprop }}</h2>
+</div>
 ```
 
 > main.html
 ```html
-<Import src="./foobar.html" />
+<Import src="./foobar.html" as="FooBar"/>
 <FooBar title="this is the title" otherProp="5">
   <p>Child Here</p>
 </FooBar>
