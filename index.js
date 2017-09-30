@@ -46,6 +46,13 @@ const getImportedComponents = (ast, ctx, opts) => {
         opts.root || (ctx.filename && path.dirname(ctx.filename)) || ''
       const src = path.join(resolveRoot, node.attrs.src[0].content)
       const name = node.attrs.as[0].content
+      // add dependency if applicable
+      if (ctx.dependencies) {
+        ctx.dependencies.push({
+          file: src,
+          parent: ctx.filename
+        })
+      }
       promises.push(
         compileComponent(src, ctx).then(component => {
           importedComponents[name.toLowerCase()] = component
