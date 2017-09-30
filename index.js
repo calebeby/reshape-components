@@ -15,17 +15,14 @@ const compileComponent = (src, ctx, props) =>
         componentTree
       )
     )
-    .then(codeContent => props => {
-      const expression = `function () {
-        const props = ${JSON.stringify(props)}
-        return __nodes[0]
-      }()`
-      return {
-        type: 'code',
-        content: expression,
-        nodes: [codeContent]
-      }
-    })
+    .then(codeContent => props => ({
+      type: 'code',
+      content: `function () {
+          const props = ${JSON.stringify(props)}
+          return __nodes[0]
+        }()`,
+      nodes: [codeContent]
+    }))
 
 const getImportedComponents = (ast, ctx, opts) => {
   const importedComponents = {}
