@@ -1,4 +1,6 @@
 # Reshape Components
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/calebeby/reshape-components.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/calebeby/reshape-components.svg?branch=master)](https://travis-ci.org/calebeby/reshape-components)
 [![codecov](https://codecov.io/gh/calebeby/reshape-components/branch/master/graph/badge.svg)](https://codecov.io/gh/calebeby/reshape-components)
 
