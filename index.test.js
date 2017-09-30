@@ -18,3 +18,30 @@ const fixture = async name => {
 test('uses component from other file', async () => {
   expect(await fixture('component')).toMatchSnapshot()
 })
+
+describe('import element', () => {
+  test('should throw if "src" attribute is missing', () => {
+    expect(fixture('no-src')).rejects.toHaveProperty(
+      'message',
+      `import tag has no "src" attribute
+From Plugin: reshape-components
+Location: [no filename]:1:1
+
+ > 1 | <Import as="FooBar"/>
+     | ^
+`
+    )
+  })
+  test('should throw if "as" attribute is missing', () => {
+    expect(fixture('no-as')).rejects.toHaveProperty(
+      'message',
+      `import tag has no "as" attribute
+From Plugin: reshape-components
+Location: [no filename]:1:1
+
+ > 1 | <Import src="./foobar.html"/>
+     | ^
+`
+    )
+  })
+})
