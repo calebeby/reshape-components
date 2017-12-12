@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^4.1.1",
-    "@commitlint/config-angular": "^4.2.0",
+    "@commitlint/config-angular": "^5.1.1",
     "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.0",
     "eslint": "^4.7.2",
@@ -52,6 +52,8 @@
     "jest": "^21.2.1",
     "lint-staged": "^5.0.0",
     "prettier": "^1.7.2",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.9.2",
     "prettier_d": "^5.7.3",
     "reshape": "^0.4.1",
     "reshape-expressions": "^0.1.5",
