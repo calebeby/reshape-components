@@ -36,7 +36,7 @@
   "devDependencies": {
     "@commitlint/cli": "^4.1.1",
     "@commitlint/config-angular": "^5.1.1",
-    "babel-jest": "^21.2.0",
+    "babel-jest": "^22.0.0",
     "babel-preset-env": "^1.6.0",
     "eslint": "^4.7.2",
     "eslint-config-prettier": "^2.6.0",
