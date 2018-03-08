@@ -55,7 +55,7 @@
     "prettier_d": "^5.7.3",
     "reshape": "^0.4.1",
     "reshape-expressions": "^0.1.5",
-    "semantic-release": "^11.0.2"
+    "semantic-release": "^15.0.2"
   },
   "lint-staged": {
     "**/*.js": ["npm run format", "git add"]
