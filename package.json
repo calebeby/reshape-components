@@ -46,7 +46,7 @@
     "eslint-plugin-jest": "^21.4.3",
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-standard": "^3.1.0",
     "eslint_d": "^5.1.0",
     "husky": "^0.14.3",
     "jest": "^22.0.0",
